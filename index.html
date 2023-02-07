@@ -1,13 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram Feed</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Feed</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+
+
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-1 text-dark" href="#">
+        <i class="fa-brands fa-instagram"></i>
+        <span>Instagram</span>
+      </a>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <button class="btn btn-success mx-4" data-bs-toggle="modal" data-bs-target="#reg-modal">
+          Create a new post
+        </button>
+        <div class="modal fade" id="reg-modal" tableindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modal-title">Create a new post</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label for="exampleFormControlTextarea1" class="form-label">Caption:</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                    placeholder="Add the caption of your post here"></textarea>
+                </div>
+                <button type="button" class="btn btn-light">
+                  <i class="fa-solid fa-camera"></i>
+                </button>
+                <button type="button" class="btn btn-light">
+                  <i class="fa-solid fa-location-dot"></i>
+                </button>
+
+              </div>
+              <div class="modal-footer">
+                <button class="btn btn-secondary">Close</button>
+                <button class="btn btn-success">Publish</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <i class="fa-solid fa-gear"></i>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Accesibility</a></li>
+            <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+            <hr>
+            <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <main class="container">
+    <ul class="nav nav-pills mb-3 justify-content-center" id="pills-tab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+          type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+          <i class="fa-solid fa-table-cells"></i>
+        </button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+          type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+          <i class="fa-solid fa-square"></i>
+        </button>
+      </li>
+    </ul>
+    <div class="tab-content" id="pills-tabContent">
+
+      <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+        tabindex="0">
+
+        <div class="container text-center">
+          <div class="row row-col-3">
+
+            <div class="col-4">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/LutraCanadensis_fullres.jpg"
+                class="img-fluid " alt="Responsive image">
+            </div>
+            <div class="col-4">
+              <img src="https://definicion.de/wp-content/uploads/2009/12/paisaje-1.jpg" class="img-fluid "
+                alt="Responsive image">
+            </div>
+            <div class="col-4">
+              <img src="https://www.xtrafondos.com/descargar.php?id=5846&resolucion=2560x1440" class="img-fluid "
+                alt="Responsive image">
+            </div>
+            <div class="col-4">
+              <img
+                src="https://static.nationalgeographic.es/files/styles/image_3200/public/01-domesticated-dog-alaska.jpg?w=1900&h=1267"
+                class="img-fluid m-2" alt="Responsive image">
+            </div>
+            <div class="col-4">
+              <img src="https://concepto.de/wp-content/uploads/2020/04/lobo-e1588025777127.jpg" class="img-fluid m-2"
+                alt="Responsive image">
+            </div>
+            <div class="col-4">
+              <img
+                src="https://static.nationalgeographic.es/files/styles/image_3200/public/coral-reefs-2728211.jpg?w=1600&h=900"
+                class="img-fluid m-2" alt="Responsive image">
+            </div>
+            <div class="col-4">
+              <img
+                src="https://www.ngenespanol.com/wp-content/uploads/2022/09/tigre-de-bengala-el-gran-felino-de-las-selvas-de-la-india.jpg"
+                class="img-fluid m-2" alt="Responsive image">
+            </div>
+            <div class="col-4">
+              <img src="https://humanidades.com/wp-content/uploads/2017/03/lago-volcanico-e1565747614501.jpg"
+                class="img-fluid m-2" alt="Responsive image">
+            </div>
+            <div class="col-4">
+              <img
+                src="https://static.nationalgeographicla.com/files/styles/image_3200/public/01-edge-of-space-sts080-759-038_orig.jpg?w=1900&h=1900"
+                class="img-fluid m-2" alt="Responsive image">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0" ;>
+
+        <div class="container justify-content-center">
+          <div class="card p-3 m-5" style="width: 28rem;">
+            <div style="display:flex; justify-content: space-between;">
+              <h1 class="fs-5">My crazy cat Spark</h1>
+              <p class="text-secondary fs-8">08/26</p>
+            </div>
+            <img src="https://static.nationalgeographicla.com/files/styles/image_3200/public/01-edge-of-space-sts080-759-038_orig.jpg?w=1900&h=1900" class="card-img"
+              alt="...">
+            <div class="card-body">
+              <h5 class="card-title fs-5">204 Likes</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            </div>
+          </div>
+  
+          <div class="card p-3 m-5" style="width: 28rem;">
+            <div style="display:flex; justify-content: space-between;">
+              <h1 class="fs-5">Beautiful empty space</h1>
+              <p class="text-secondary fs-8">08/26</p>
+            </div>
+            <img src="https://humanidades.com/wp-content/uploads/2017/03/lago-volcanico-e1565747614501.jpg"
+              alt="...">
+            <div class="card-body">
+              <h5 class="card-title fs-5">204 Likes</h5>
+              <p class="card-text">This is an example of a beautiful picture of the space.</p>
+            </div>
+          </div>
+  
+          <div class="card p-3 m-5" style="width: 28rem;">
+            <div style="display:flex; justify-content: space-between;">
+              <h1 class="fs-5">My crazy cat Spark</h1>
+              <p class="text-secondary fs-8">08/26</p>
+            </div>
+            <img src="https://www.ngenespanol.com/wp-content/uploads/2022/09/tigre-de-bengala-el-gran-felino-de-las-selvas-de-la-india.jpg"
+              alt="...">
+            <div class="card-body">
+              <h5 class="card-title fs-5">204 Likes</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            </div>
+          </div>
+  
+
+        </div>
+       
+
+
+
+
+
+
+      </div>
+
+    </div>
+  </main>
+
 </body>
+
 </html>
